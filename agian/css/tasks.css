@@ -1,0 +1,114 @@
+/* --- Task List Styling --- */
+#task-list .list-group-item {
+    background-color: transparent;
+    border-color: var(--glass-border) !important;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#task-list .list-group-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.task-text {
+    flex-grow: 1;
+    margin: 0 1rem;
+    transition: all 0.3s ease;
+    cursor: move; /* Indicates the text is draggable */
+}
+
+/* --- Completed Task State --- */
+.task.completed .task-text {
+    text-decoration: line-through;
+    color: var(--text-secondary);
+}
+
+/* --- Custom Checkbox Animation --- */
+.task-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid var(--glass-border);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.task-checkbox:hover {
+    border-color: var(--primary-color);
+}
+
+.task-checkbox:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.task-checkbox:checked::after {
+    content: '\f26e'; /* Bootstrap Icon checkmark */
+    font-family: 'bootstrap-icons';
+    font-size: 16px;
+    color: var(--background-dark);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pop-in 0.3s ease;
+}
+
+@keyframes pop-in {
+    from {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* --- Delete Button --- */
+.delete-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+    color: #ef4444; /* Red color for delete */
+    transform: scale(1.1);
+}
+
+/* --- Toast Notification Styling --- */
+.toast {
+    background-color: #1e293b; /* Darker glass color */
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    border-radius: 10px;
+}
+
+.toast-header {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+/* --- Drag and Drop Styling --- */
+.task.dragging {
+    opacity: 0.5;
+    background-color: rgba(var(--primary-color-rgb), 0.2);
+}
+
+.drag-over {
+    /* Shows a line where the item will be dropped */
+    border-top: 2px solid var(--primary-color) !important;
+}

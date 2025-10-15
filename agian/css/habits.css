@@ -1,0 +1,95 @@
+/* --- Individual Habit Row --- */
+.habit-row {
+    background: var(--glass-bg);
+    border-radius: 15px;
+    border: 1px solid var(--glass-border);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+    animation: pop-in 0.4s ease forwards;
+    color: white;
+}
+
+.habit-row:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px var(--primary-color, 0.5);
+}
+
+.habit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.habit-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+}
+
+.habit-stats {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.habit-stats .streak-fire {
+    color: #f59e0b;
+    /* A nice fire orange */
+}
+
+/* --- Weekly Grid --- */
+.weekly-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.day-cell {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    /* Makes the cell a perfect square */
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border: 1px solid var(--glass-border);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.day-cell.completed {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--background-white);
+}
+
+.day-cell:hover:not(.completed) {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary-color);
+}
+
+.day-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.day-cell .checkmark {
+    font-size: 1.5rem;
+    display: none;
+    /* Hidden by default */
+}
+
+.day-cell.completed .checkmark {
+    display: block;
+    animation: pop-in 0.3s ease;
+}
+
+.day-cell.completed .day-label {
+    display: none;
+    /* Hide day label when completed */
+}

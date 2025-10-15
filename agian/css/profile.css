@@ -1,0 +1,54 @@
+/* --- Profile Card --- */
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--glass-border);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+}
+
+.username-display {
+    font-size: 2rem;
+    font-weight: 700;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    padding: 0;
+}
+
+.username-display:disabled {
+    background: none; /* Ensure no background change on disable */
+}
+
+.username-display:focus {
+    outline: none;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* --- Stats Grid --- */
+.stat-card {
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--shadow-color);
+}
+
+.stat-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-weight: 500;
+}

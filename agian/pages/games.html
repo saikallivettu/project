@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Zone - NotionX</title>
+
+    <!-- Bootstrap 5 CSS & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Google Fonts (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/games.css">
+</head>
+
+<body>
+    <!-- Shared Navigation Bar -->
+    <header id="navbar-container"></header>
+
+    <main class="container py-5 fade-in">
+        <!-- Page Header -->
+        <section class="text-center mb-5">
+            <h1 class="display-5 fw-bold text-white">Arcade Zone</h1>
+            <p class="text-secondary fs-5 text-white">Play a mini-game to earn extra XP and coins.</p>
+        </section>
+
+        <!-- Game Selection Grid -->
+        <section id="game-selection-grid" class="row g-4">
+            <!-- Game Card 1: Target Practice -->
+            <div class="col-md-6 col-lg-4">
+                <div class="game-card card nx-glass p-4 text-center">
+                    <i class="bi bi-bullseye game-icon"></i>
+                    <h5 class="fw-bold text-white mt-3">Target Practice</h5>
+                    <p class="text-secondary small">Click the targets as fast as you can before time runs out.</p>
+                    <button class="btn btn-primary stretched-link" data-game="target">Play</button>
+                </div>
+            </div>
+
+            <!-- Game Card 2: Typing Speed Test -->
+            <div class="col-md-6 col-lg-4">
+                <div class="game-card card nx-glass p-4 text-center">
+                    <i class="bi bi-keyboard-fill game-icon"></i>
+                    <h5 class="fw-bold text-white mt-3">Typing Speed Test</h5>
+                    <p class="text-secondary small">Test your typing speed and accuracy against the clock.</p>
+                    <button class="btn btn-primary stretched-link" data-game="typing">Play</button>
+                </div>
+            </div>
+
+            <!-- Game Card 3: Memory Match -->
+            <div class="col-md-6 col-lg-4">
+                <div class="game-card card nx-glass p-4 text-center">
+                    <i class="bi bi-grid-3x3-gap-fill game-icon"></i>
+                    <h5 class="fw-bold text-white mt-3">Memory Match</h5>
+                    <p class="text-secondary small">Find all the matching pairs of icons before time is up.</p>
+                    <button class="btn btn-primary stretched-link" data-game="memory">Play</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Game Modal -->
+    <div class="modal fade" id="game-modal" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content nx-glass">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-white" id="game-modal-title">Game Title</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="game-modal-body">
+                    <!-- Game content will be injected here -->
+                </div>
+                <div class="modal-footer border-0" id="game-modal-footer">
+                    <!-- Game controls like 'Restart' will be injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Your Custom JS -->
+    <script src="../js/main.js"></script>
+    <script src="../js/games.js"></script>
+</body>
+
+</html>

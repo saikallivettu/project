@@ -1,0 +1,58 @@
+/* --- Water Glass Styling --- */
+.water-glass {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    border: 5px solid var(--glass-border);
+    overflow: hidden; /* This is crucial for the wave effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.glass-icon {
+    font-size: 80px;
+    color: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+
+/* --- The Animated Wave --- */
+.wave {
+    position: absolute;
+    bottom: 0; /* Starts at the bottom */
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(14, 165, 233, 0.7); /* A nice water blue */
+    border-radius: 45%;
+    transform-origin: center bottom;
+    animation: wave 8s infinite linear;
+    transition: height 0.5s ease-out; /* Smoothly animates height change */
+    z-index: 0;
+}
+
+/* Make a second, slightly different wave for a more realistic effect */
+.wave::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(56, 189, 248, 0.5);
+    border-radius: 40%;
+    animation: wave 12s infinite linear;
+    animation-direction: reverse;
+}
+
+@keyframes wave {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,124 @@
+/* Styling for the notes grid layout */
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Base style for a single note */
+.note {
+    height: 300px;
+    background-color: #fef3c7;
+    /* Default yellow color */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.note:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* The text area where the user writes */
+.note textarea {
+    background-color: transparent;
+    border: none;
+    resize: none;
+    flex-grow: 1;
+    /* Takes up all available space */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #333;
+}
+
+.note textarea:focus {
+    outline: none;
+}
+
+/* Toolbar at the top of the note */
+.note-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5rem;
+}
+
+.note-toolbar .color-palette {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.note-toolbar .color-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.note-toolbar .color-dot:hover {
+    transform: scale(1.15);
+}
+
+.note-toolbar .btn-delete {
+    background: none;
+    border: none;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.note-toolbar .btn-delete:hover {
+    color: #dc3545;
+    /* Red on hover */
+}
+
+
+/* Note footer for the timestamp */
+.note-footer {
+    font-size: 0.75rem;
+    color: #6c757d;
+    text-align: right;
+    margin-top: auto;
+    /* Pushes to the bottom */
+}
+
+
+/* Color variations for notes */
+.note.color-yellow {
+    background-color: #fef3c7;
+}
+
+.note.color-blue {
+    background-color: #dbeafe;
+}
+
+.note.color-green {
+    background-color: #dcfce7;
+}
+
+.note.color-pink {
+    background-color: #fce7f3;
+}
+
+.note.color-purple {
+    background-color: #f3e8ff;
+}
+
+/* Customizing the search input for a glassy look */
+#search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#search-input:focus {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: #38bdf8 !important;
+    box-shadow: 0 0 0 0.25rem rgba(56, 189, 248, 0.25) !important;
+    color: white;
+}

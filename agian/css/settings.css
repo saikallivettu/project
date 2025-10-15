@@ -1,0 +1,8 @@
+/* --- Settings Page Specifics --- */
+.danger-zone {
+    border-color: rgba(239, 68, 68, 0.4); /* Red border */
+}
+
+.danger-zone:hover {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.4); /* Red glow on hover */
+}

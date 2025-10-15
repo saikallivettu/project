@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - NotionX</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Google Fonts (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/settings.css"> <!-- Settings specific styles -->
+</head>
+
+<body>
+
+    <!-- Shared Navigation Bar -->
+    <header id="navbar-container"></header>
+
+    <main class="container py-5 fade-in">
+        <!-- Page Header -->
+        <section class="text-center mb-5">
+            <h1 class="display-5 fw-bold text-white">Settings</h1>
+            <p class="text-secondary fs-5 text-white">Manage your data and preferences.</p>
+        </section>
+
+        <!-- Preferences Section -->
+        <section class="row justify-content-center mb-5">
+            <div class="col-lg-8">
+                <!-- Preferences Card -->
+                <div class="card nx-glass mb-4">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold text-white">Preferences</h5>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="notifications-toggle">
+                            <label class="form-check-label text-white for=" notifications-toggle">Enable Pomodoro
+                                Notifications</label>
+                        </div>
+                        <small class="text-white">Show a desktop notification when a focus or break session
+                            ends.</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Management Section -->
+        <section class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- Export Card -->
+                <div class="card nx-glass mb-4">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold text-white">Export Data</h5>
+                        <p class="text-white">Save a backup of all your tasks, notes, and progress as a JSON file. Keep
+                            it safe!</p>
+                        <button id="export-data-btn" class="btn btn-primary">
+                            <i class="bi bi-download"></i> Export My Data
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Import Card -->
+                <div class="card nx-glass mb-4">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold text-white">Import Data</h5>
+                        <p class="text-white">Restore your data from a JSON backup file. This will overwrite your
+                            current progress.</p>
+                        <input type="file" id="import-data-input" class="form-control" accept=".json">
+                    </div>
+                </div>
+
+                <!-- Danger Zone -->
+                <div class="card nx-glass danger-zone mt-5">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold text-danger">Danger Zone</h5>
+                        <p class="text-secondary">This action is irreversible. Resetting will permanently delete all
+                            your data and progress.</p>
+                        <button id="reset-data-btn" class="btn btn-danger">
+                            <i class="bi bi-exclamation-triangle-fill"></i> Reset All Data
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Your Custom JS -->
+    <script src="../js/main.js"></script>
+    <script src="../js/settings.js"></script>
+</body>
+
+</html>

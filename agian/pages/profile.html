@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - NotionX</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Google Fonts (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/profile.css"> <!-- Profile specific styles -->
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#38bdf8">
+</head>
+
+<body>
+
+    <!-- Shared Navigation Bar -->
+    <header id="navbar-container"></header>
+
+    <main class="container py-5 fade-in">
+        <!-- Page Header -->
+        <section class="text-center mb-5">
+            <h1 class="display-5 fw-bold text-white">My Profile</h1>
+            <p class="text-secondary fs-5  text-white">Your progress, stats, and achievements.</p>
+        </section>
+
+        <!-- Profile Card Section -->
+        <section class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card nx-glass p-4">
+                    <div class="row align-items-center">
+                        <!-- Avatar -->
+                        <div class="col-md-3 text-center mb-4 mb-md-0">
+                            <img src="data:image/jpeg;base64,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"
+                                alt="User Avatar" class="profile-avatar">
+                        </div>
+                        <!-- User Info -->
+                        <div class="col-md-9">
+                            <div class="d-flex align-items-center mb-2">
+                                <input type="text" id="username-input" class="username-display" value="Username"
+                                    disabled>
+                                <button id="edit-username-btn" class="btn btn-sm btn-outline-secondary ms-2"><i
+                                        class="bi bi-pencil-fill"></i></button>
+                            </div>
+                            <p class="text-secondary mb-3">Level <span id="profile-level" class="fw-bold">1</span></p>
+
+                            <!-- XP Progress Bar -->
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="text-white-50 small">XP Progress</span>
+                                <span class="text-white-50 small"><span id="profile-xp">0</span> / 100</span>
+                            </div>
+                            <div class="progress" style="height: 12px;">
+                                <div id="profile-xp-bar" class="progress-bar bg-primary" role="progressbar"
+                                    style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Grid Section -->
+        <section class="mt-5">
+            <h3 class="text-center mb-4 fw-bold text-white">My Stats</h3>
+            <div class="row g-4">
+                <!-- Stat Card: Total XP -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card nx-glass stat-card">
+                        <i class="bi bi-star-fill stat-icon text-warning"></i>
+                        <h2 class="stat-value text-primary" id="total-xp-stat">0</h2>
+                        <p class="stat-label text-white">Total XP Earned</p>
+                    </div>
+                </div>
+                <!-- Stat Card: Tasks Completed -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card nx-glass stat-card">
+                        <i class="bi bi-check2-circle stat-icon text-success"></i>
+                        <h2 class="stat-value text-primary" id="tasks-completed-stat">0</h2>
+                        <p class="stat-label text-white">Tasks Completed</p>
+                    </div>
+                </div>
+                <!-- Stat Card: Pomodoro Cycles -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card nx-glass stat-card">
+                        <i class="bi bi-clock-history stat-icon text-info"></i>
+                        <h2 class="stat-value text-primary" id="pomodoro-cycles-stat">0</h2>
+                        <p class="stat-label text-white">Pomodoro Cycles</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Recent Achievements Section -->
+            <section class="mt-5">
+                <h3 class="text-center mb-4 fw-bold">Recent Achievements</h3>
+                <div id="recent-achievements" class="row g-4 justify-content-center">
+                    <!-- Recent achievements will be dynamically inserted here -->
+                </div>
+                <div class="text-center mt-3">
+                    <a href="achievements.html" class="btn btn-outline-primary text-white">View All Achievements</a>
+                </div>
+            </section>
+    </main>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Your Custom JS -->
+    <script src="../js/main.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+
+</html>

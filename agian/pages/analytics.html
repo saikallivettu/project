@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - NotionX</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Google Fonts (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/analytics.css">
+</head>
+
+<body>
+
+    <!-- Shared Navigation Bar -->
+    <header id="navbar-container"></header>
+
+    <main class="container py-5 fade-in">
+        <!-- Page Header -->
+        <section class="text-center mb-5">
+            <h1 class="display-5 fw-bold text-white">Your Analytics</h1>
+            <p class="text-secondary fs-5 text-white">Visualize your productivity and wellness patterns.</p>
+        </section>
+
+        <section class="row g-4">
+            <!-- Weekly Task Summary Chart -->
+            <div class="col-lg-8">
+                <div class="card nx-glass p-4 h-100">
+                    <h5 class="fw-bold mb-3 text-white">Tasks Completed This Week</h5>
+                    <div class="chart-container">
+                        <canvas id="tasks-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mood Distribution Chart -->
+            <div class="col-lg-4">
+                <div class="card nx-glass p-4 h-100">
+                    <h5 class="fw-bold mb-3 text-white">Mood Distribution</h5>
+                    <div class="chart-container">
+                        <canvas id="mood-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Your Custom JS -->
+    <script src="../js/main.js"></script>
+    <script src="../js/analytics.js"></script>
+</body>
+
+</html>

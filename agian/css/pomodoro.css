@@ -1,0 +1,114 @@
+/* ---- Base Timer Styles ---- */
+.timer-display {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer-text {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+    /* Start from the top */
+}
+
+.progress-ring__bg {
+    stroke: rgba(255, 255, 255, 0.1);
+}
+
+.progress-ring__circle {
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.5s ease-out, stroke 0.5s ease;
+}
+
+/* ---- Dynamic Mode Styling ---- */
+
+/* Pomodoro (Focus) Mode */
+#timer-container.pomodoro-mode .progress-ring__circle {
+    stroke: #3498db;
+    /* Blue */
+}
+
+#timer-container.pomodoro-mode #start-pause-btn {
+    background-color: #3498db;
+    border-color: #3498db;
+}
+
+#timer-container.pomodoro-mode .nav-pills .nav-link.active {
+    background-color: #3498db;
+}
+
+/* Short Break Mode */
+#timer-container.shortBreak-mode .progress-ring__circle {
+    stroke: #2ecc71;
+    /* Green */
+}
+
+#timer-container.shortBreak-mode #start-pause-btn {
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+}
+
+#timer-container.shortBreak-mode .nav-pills .nav-link.active {
+    background-color: #2ecc71;
+}
+
+/* Long Break Mode */
+#timer-container.longBreak-mode .progress-ring__circle {
+    stroke: #9b59b6;
+    /* Purple */
+}
+
+#timer-container.longBreak-mode #start-pause-btn {
+    background-color: #9b59b6;
+    border-color: #9b59b6;
+}
+
+#timer-container.longBreak-mode .nav-pills .nav-link.active {
+    background-color: #9b59b6;
+}
+
+/* ---- Nav Tabs Customization ---- */
+.nav-pills .nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-pills .nav-link.active {
+    color: white;
+    font-weight: 600;
+}
+
+/* ---- Modal Glassmorphism ---- */
+#settings-modal .modal-content {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#settings-modal .form-control {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+#settings-modal .form-control:focus {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-color: #3498db;
+    box-shadow: none;
+    color: white;
+}

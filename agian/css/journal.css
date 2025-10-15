@@ -1,0 +1,196 @@
+/* ---- General Layout & Form ---- */
+#journal-entry-text,
+#journal-tags,
+#search-input {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+#journal-entry-text:focus,
+#journal-tags:focus,
+#search-input:focus {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-color: var(--primary-color, #38bdf8);
+    /* Use theme color */
+    box-shadow: none;
+    color: white;
+}
+
+.word-count {
+    font-style: italic;
+}
+
+/* ---- Mood Selector (from previous version, still works) ---- */
+.mood-selector {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.mood-selector label {
+    position: relative;
+    cursor: pointer;
+}
+
+.mood-selector input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.mood-selector .mood-icon {
+    font-size: 2rem;
+    color: #6c757d;
+    transition: all 0.2s ease;
+}
+
+.mood-selector .mood-icon:hover {
+    transform: scale(1.2);
+}
+
+.mood-selector input[type="radio"]:checked+.mood-icon {
+    transform: scale(1.2);
+}
+
+.mood-selector input[type="radio"]:checked+.mood-happy {
+    color: #ffc107;
+}
+
+.mood-selector input[type="radio"]:checked+.mood-neutral {
+    color: #adb5bd;
+}
+
+.mood-selector input[type="radio"]:checked+.mood-sad {
+    color: #0d6efd;
+}
+
+.mood-selector input[type="radio"]:checked+.mood-excited {
+    color: #fd7e14;
+}
+
+.mood-selector input[type="radio"]:checked+.mood-tired {
+    color: #6f42c1;
+}
+
+/* ---- Journal Prompt ---- */
+.prompt-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    border-left: 3px solid var(--primary-color, #38bdf8);
+    padding-left: 1rem;
+}
+
+/* ---- Analytics Section ---- */
+.analytics-card canvas {
+    max-height: 150px;
+}
+
+.streak-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.streak-display .bi-fire {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.streak-count {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1.2;
+}
+
+.streak-label {
+    font-size: 1rem;
+    color: #adb5bd;
+}
+
+/* ---- Past Entries Accordion ---- */
+.accordion-item {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.accordion-header .accordion-button {
+    background: transparent;
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 1rem 0;
+}
+
+.accordion-header .accordion-button:not(.collapsed) {
+    box-shadow: none;
+}
+
+.accordion-header .accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    filter: brightness(0) invert(1);
+    /* Make chevron white */
+}
+
+.accordion-body {
+    color: #ced4da;
+    padding: 0 0 1rem 0;
+}
+
+/* Styles for Markdown content */
+.journal-content h1,
+.journal-content h2,
+.journal-content h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.journal-content ul,
+.journal-content ol {
+    padding-left: 1.5rem;
+}
+
+.journal-content strong {
+    color: #fff;
+}
+
+.journal-content a {
+    color: var(--primary-color, #38bdf8);
+}
+
+.journal-tags .badge {
+    font-weight: 500;
+}
+
+.journal-actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Mood-specific coloring for accordion items */
+.accordion-button.mood-happy {
+    border-left: 3px solid #ffc107;
+}
+
+.accordion-button.mood-neutral {
+    border-left: 3px solid #adb5bd;
+}
+
+.accordion-button.mood-sad {
+    border-left: 3px solid #0d6efd;
+}
+
+.accordion-button.mood-excited {
+    border-left: 3px solid #fd7e14;
+}
+
+.accordion-button.mood-tired {
+    border-left: 3px solid #6f42c1;
+}

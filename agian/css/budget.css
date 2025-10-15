@@ -1,0 +1,38 @@
+/* --- Budget Page Styling --- */
+
+/* Transaction List Item */
+.list-group-item {
+    background: none;
+    border-color: var(--glass-border) !important;
+    color: var(--text-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.transaction-income {
+    color: #22c55e; /* Green */
+}
+
+.transaction-expense {
+    color: #ef4444; /* Red */
+}
+
+.transaction-income::before {
+    content: '\f140'; /* Bootstrap Icon: Arrow Up Circle Fill */
+    font-family: 'bootstrap-icons';
+    margin-right: 10px;
+}
+
+.transaction-expense::before {
+    content: '\f12f'; /* Bootstrap Icon: Arrow Down Circle Fill */
+    font-family: 'bootstrap-icons';
+    margin-right: 10px;
+}
+
+/* Chart Container to ensure responsiveness */
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
